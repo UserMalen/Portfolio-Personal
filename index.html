@@ -1,0 +1,544 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN link -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- link font style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- link icon style -->
+    <link rel="stylesheet" href="https://img.icons8.com/color/48/html-5--v1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- style animation -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-primary dark:bg-gray-500 ">
+    <!-- header contain -->
+    <header class="w-full px-4 sm:px-6 md:px-[40px] py-3 md:py-[15px] fixed top-0 z-50 shadow-sm backdrop-blur-lg dark:text-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl sm:text-2xl md:text-[28px]">MaLEn🤖</h1>
+                <nav class="text-base md:text-[16px] font-bold hidden md:block">
+                    <ul class="flex gap-4 md:gap-[35px]">
+                        <li><a href="#home" class="hover:text-blue-600 transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-blue-600 transition-colors">About</a></li>
+                        <li><a href="#skill" class="hover:text-blue-600 transition-colors">Skill</a></li>
+                        <li><a href="#project" class="hover:text-blue-600 transition-colors">Project</a></li>
+                        <li><a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a></li>
+                    </ul>
+                </nav>
+                <!-- toggel btn -->
+                <button class="text-[16px] cursor-pointer transition-all duration-300 transform hover:scale-105" onclick="toggleDark()">🌟</button>
+                <!-- btn-menu -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="dark:text-gray-100 hover:text-blue-600 focus:outline-none cursor-pointer">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden shadow-lg bg-white dark:bg-gray-500">
+            <nav class="text-base font-bold">
+                <ul class="flex flex-col w-full">
+                    <li class="border-b border-gray-100">
+                        <a href="#home" class="block py-3 px-6 hover:bg-blue-50 hover:text-blue-600 transition-colors  items-center">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="border-b border-gray-100">
+                        <a href="#about" class="block py-3 px-6 hover:bg-blue-50 hover:text-blue-600 transition-colors  items-center">
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li class="border-b border-gray-100">
+                        <a href="#skill" class="block py-3 px-6 hover:bg-blue-50 hover:text-blue-600 transition-colors items-center">
+                            <span>Skill</span>
+                        </a>
+                    </li>
+                    <li class="border-b border-gray-100">
+                        <a href="#project" class="block py-3 px-6 hover:bg-blue-50 hover:text-blue-600 transition-colors items-center">
+                            <span>Project</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="block py-3 px-6 hover:bg-blue-50 hover:text-blue-600 transition-colors  items-center">
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- main contain -->
+    <main class="pt-16">
+        <!-- home-page -->
+        <section id="home" class="min-h-screen z-1 pt-10 md:pt-0 ">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-12 dark:text-gray-100">
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-[50px] justify-center">
+                    <div class="mt-8 md:mt-[4rem] max-w-3xl text-2xl md:text-[32px] text-accents order-2 md:order-1">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">✦ ✦✦✦ ✦</span>
+                        <h2 class="font-semibold text-center md:text-left">I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">Seng Somalen
+                        </span>👋</h2>
+                        <h2 class="font-semibold text-center md:text-left">I'm a Frontend Developer</h2>
+                        <p class="text-base md:text-[16px] mt-4 text-center md:text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum minus deserunt tempora natus cumque, esse necessitatibus repudiandae itaque quisquam, obcaecati ad facilis consequatur! Iusto officia, praesentium impedit molestias alias amet.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-5">
+                            <button type="button" class="text-white hover:bg-accents rounded-lg px-6 py-3 text-lg bg-blue-600 cursor-pointer transition-all duration-300 transform hover:scale-105 shadow-md">
+                                Download CV
+                            </button>
+                            <a href="#contact">
+                                <button type="button" class="text-accents border border-accents rounded-lg px-6 py-3 text-lg cursor-pointer transition-all duration-300 transform hover:scale-105 shadow-md">
+                                    Contact Me
+                                </button>
+                            </a>
+                        </div>
+                        <div class="mt-7 text-2xl md:text-[32px] flex justify-center md:justify-start gap-6">
+                            <a href="https://github.com/"><i class="fa-brands fa-github fa-bounce hover:text-blue-600"></i></a>
+                            <a href="https://t.me/Sengsomalen"><i class="fa-brands fa-telegram fa-spin-pulse hover:text-blue-600"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram fa-spin-pulse hover:text-blue-600"></i></a>
+                            <a href="https://www.youtube.com/@LenZ810"><i class="fa-brands fa-youtube fa-bounce hover:text-blue-600"></i></a>
+                        </div>
+                    </div>
+                    <div class="relative order-1 md:order-2">
+                        <img class="w-64 md:w-[400px] z-1 relative cursor-pointer" src="../images/personal-removebg-preview.png" alt="profile">
+                        <img class="w-24 md:w-[150px] absolute top-4 md:top-[4em] left-32 md:left-[11em] " src="../images/Untitled design - 2022-05-02T000052_596.avif" alt="filter">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Particle animation container -->
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+                <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
+                <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
+                <div class="particle" style="left: 40%; animation-delay: 6s;"></div>
+                <div class="particle" style="left: 50%; animation-delay: 8s;"></div>
+                <div class="particle" style="left: 60%; animation-delay: 10s;"></div>
+                <div class="particle" style="left: 70%; animation-delay: 12s;"></div>
+                <div class="particle" style="left: 80%; animation-delay: 14s;"></div>
+                
+                <!-- Additional particles for a richer effect -->
+                <div class="particle" style="left: 15%; animation-delay: 1s; width: 4px; height: 4px;"></div>
+                <div class="particle" style="left: 25%; animation-delay: 3s; width: 6px; height: 6px;"></div>
+                <div class="particle" style="left: 35%; animation-delay: 5s; width: 3px; height: 3px;"></div>
+                <div class="particle" style="left: 45%; animation-delay: 7s; width: 7px; height: 7px;"></div>
+                <div class="particle" style="left: 55%; animation-delay: 9s; width: 5px; height: 5px;"></div>
+                <div class="particle" style="left: 65%; animation-delay: 11s; width: 4px; height: 4px;"></div>
+                <div class="particle" style="left: 75%; animation-delay: 13s; width: 6px; height: 6px;"></div>
+                <div class="particle" style="left: 85%; animation-delay: 15s; width: 3px; height: 3px;"></div>
+            </div>
+        </section>
+
+        <!-- about page -->
+        <section id="about" class="min-h-screen flex justify-center items-center py-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rounded-lg md:rounded-[12px] bg-white shadow-sm w-full dark:bg-gray-600 dark:text-gray-100">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 p-4 md:p-6">
+                    <div class="w-full md:w-auto">
+                        <img class="w-full md:w-[800px] rounded-lg md:rounded-[8px]" src="../images/profile-pic.jpg" alt="profile">
+                    </div>
+                    <div class="text-xl md:text-[32px] leading-relaxed md:leading-[2.1rem] p-4 md:p-[15px] md:pl-[30px]">
+                        <h3 class="mb-4 md:mb-[10px] text-Acolor uppercase text-center md:text-left">About Me</h3>
+                        <p class="text-base md:text-[16px] text-accents text-center md:text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti impedit porro sapiente enim molestiae amet architecto maxime molestias. Atque eveniet officiis assumenda nemo rerum, accusamus ipsum molestias voluptate amet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto laudantium, rem atque a, nemo consequatur rerum ullam deserunt repudiandae enim modi tenetur ipsum porro illo natus ab nam libero ratione!</p>
+                        <div class="flex justify-center md:justify-start">
+                            <button type="button" class="bg-sky-500 mt-5 rounded-lg px-6 py-3 text-lg text-white cursor-pointer transition-all duration-300 transform hover:scale-105 shadow-md">
+                                Read more
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span>
+                <img class="absolute w-24 md:w-40 bottom-0 right-4 md:right-[8em]" src="../images/bg-tree.png" alt="bg-tree">
+            </span>
+        </section>
+
+        <!-- skill page -->
+        <section id="skill" class="min-h-screen flex justify-center items-center py-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rounded-lg md:rounded-[12px] relative bg-white shadow-sm w-full dark:bg-gray-600 dark:text-gray-200">
+                <img class="absolute top-0 w-24 md:w-[150px]" src="../images/bg-round.png" alt="round-pic">
+                <div>
+                    <h2 class="text-xl md:text-[32px] relative mb-6 md:mb-10 mt-4 font-bold text-center">My Skill and Technologies</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7 mb-10 p-4 md:p-0">
+                    
+                    <!-- frontend -->
+                    <div class="border border-blue-900 dark:border-gray-100 p-4 md:p-5 rounded-xl md:rounded-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <h3 class="text-lg md:text-[28px] font-bold mb-4 md:mb-5">Frontend Developer</h3>
+                        <section class="mb-4">
+                            <div class="skill-item flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img width="24" height="40" src="https://img.icons8.com/color/48/html-5--v1.png" alt="html-5--v1"/>
+                                    <span class="ml-2">HTML</span>
+                                </div>
+                                <span>88%</span>
+                            </div>
+                            <div class="w-full bg-gray-50 rounded-full h-2.5 mt-2">
+                                <div class="bg-blue-500 h-2.5 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </section>
+                        <section class="mb-4">
+                            <div class="skill-item flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img width="24" height="40" src="https://img.icons8.com/color/48/css3.png" alt="css3"/>
+                                    <span class="ml-2">CSS</span>
+                                </div>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-50 rounded-full h-2.5 mt-2">
+                                <div class="bg-blue-500 h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </section>
+                        <section class="mb-4">
+                            <div class="skill-item flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img width="24" height="40" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript--v1"/>
+                                    <span class="ml-2">Javascript</span>
+                                </div>
+                                <span>45%</span>
+                            </div>
+                            <div class="w-full bg-gray-50 rounded-full h-2.5 mt-2">
+                                <div class="bg-blue-500 h-2.5 rounded-full" style="width: 45%"></div>
+                            </div>
+                        </section>
+                        <section class="mb-4">
+                            <div class="skill-item flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img width="24" height="40" src="https://img.icons8.com/color/48/tailwind_css.png" alt="tailwind_css"/>
+                                    <span class="ml-2">TailwindCSS</span>
+                                </div>
+                                <span>63%</span>
+                            </div>
+                            <div class="w-full bg-gray-50 rounded-full h-2.5 mt-2">
+                                <div class="bg-blue-500 h-2.5 rounded-full" style="width: 63%"></div>
+                            </div>
+                        </section>
+                        <section class="mb-4">
+                            <div class="skill-item flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png" alt="external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo"/>
+                                    <span class="ml-2">React</span>
+                                </div>
+                                <span>10%</span>
+                            </div>
+                            <div class="w-full bg-gray-50 rounded-full h-2.5 mt-2">
+                                <div class="bg-blue-500 h-2.5 rounded-full" style="width: 10%"></div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- backend -->
+                    <div class="border border-blue-900 dark:border-gray-100 p-4 md:p-5 rounded-xl md:rounded-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <h3 class="text-lg md:text-[28px] font-bold mb-4 md:mb-5">Backend Developer</h3>
+                        <section class="mb-4">
+                            <div class="skill-item flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img width="24" height="40" src="https://img.icons8.com/color/48/python--v1.png" alt="python--v1"/>
+                                    <span class="ml-2">Python</span>
+                                </div>
+                                <span>20%</span>
+                            </div>
+                            <div class="w-full bg-gray-50 rounded-full h-2.5 mt-2">
+                                <div class="bg-blue-500 h-2.5 rounded-full" style="width: 20%"></div>
+                            </div>
+                        </section>
+                        <section class="mb-4">
+                            <div class="skill-item flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/24/external-django-a-high-level-python-web-framework-that-encourages-rapid-development-logo-shadow-tal-revivo.png" alt="external-django-a-high-level-python-web-framework-that-encourages-rapid-development-logo-shadow-tal-revivo"/>
+                                    <span class="ml-2">Django</span>
+                                </div>
+                                <span>5%</span>
+                            </div>
+                            <div class="w-full bg-gray-50 rounded-full h-2.5 mt-2">
+                                <div class="bg-blue-500 h-2.5 rounded-full" style="width: 5%"></div>
+                            </div>
+                        </section>
+                        <section class="mb-4">
+                            <div class="skill-item flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-hypertext-preprocessor-a-widely-used-open-source-general-purpose-scripting-language-logo-color-tal-revivo.png" alt="external-hypertext-preprocessor-a-widely-used-open-source-general-purpose-scripting-language-logo-color-tal-revivo"/>
+                                    <span class="ml-2">PHP</span>
+                                </div>
+                                <span>10%</span>
+                            </div>
+                            <div class="w-full bg-gray-50 rounded-full h-2.5 mt-2">
+                                <div class="bg-blue-500 h-2.5 rounded-full" style="width: 10%"></div>
+                            </div>
+                        </section>
+                        <section class="mb-4">
+                            <div class="skill-item flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img width="24" height="40" src="https://img.icons8.com/fluency/48/laravel.png" alt="laravel"/>
+                                    <span class="ml-2">Laravel</span>
+                                </div>
+                                <span>5%</span>
+                            </div>
+                            <div class="w-full bg-gray-50 rounded-full h-2.5 mt-2">
+                                <div class="bg-blue-500 h-2.5 rounded-full" style="width: 5%"></div>
+                            </div>
+                        </section>
+                        <section class="mb-4">
+                            <div class="skill-item flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img width="24" height="40" src="https://img.icons8.com/fluency/48/node-js.png" alt="node-js"/>
+                                    <span class="ml-2">Node.js</span>
+                                </div>
+                                <span>15%</span>
+                            </div>
+                            <div class="w-full bg-gray-50 rounded-full h-2.5 mt-2">
+                                <div class="bg-blue-500 h-2.5 rounded-full" style="width: 15%"></div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- database -->
+                    <div class="border border-blue-900 dark:border-gray-100 p-4 md:p-5 rounded-xl md:rounded-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <h3 class="text-lg md:text-[28px] font-bold mb-4 md:mb-5">Database Developer</h3>
+                        <section class="mb-4">
+                            <div class="skill-item flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/24/external-postgre-sql-a-free-and-open-source-relational-database-management-system-logo-shadow-tal-revivo.png" alt="external-postgre-sql-a-free-and-open-source-relational-database-management-system-logo-shadow-tal-revivo"/>
+                                    <span class="ml-2">Postgresql</span>
+                                </div>
+                                <span>23%</span>
+                            </div>
+                            <div class="w-full bg-gray-50 rounded-full h-2.5 mt-2">
+                                <div class="bg-blue-500 h-2.5 rounded-full" style="width: 23%"></div>
+                            </div>
+                        </section>
+                        <section class="mb-4">
+                            <div class="skill-item flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img width="24" height="40" src="https://img.icons8.com/fluency/48/mysql-logo.png" alt="mysql-logo"/>
+                                    <span class="ml-2">MySql</span>
+                                </div>
+                                <span>25%</span>
+                            </div>
+                            <div class="w-full bg-gray-50 rounded-full h-2.5 mt-2">
+                                <div class="bg-blue-500 h-2.5 rounded-full" style="width: 25%"></div>
+                            </div>
+                        </section>
+                        <section class="mb-4">
+                            <div class="skill-item flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img width="24" height="40" src="https://img.icons8.com/color/48/oracle-logo.png" alt="oracle-logo"/>
+                                    <span class="ml-2">Oracle</span>
+                                </div>
+                                <span>10%</span>
+                            </div>
+                            <div class="w-full bg-gray-50 rounded-full h-2.5 mt-2">
+                                <div class="bg-blue-500 h-2.5 rounded-full" style="width: 10%"></div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- project page -->
+        <section id="project" class="min-h-screen py-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 sm:py-6 lg:px-8 ">
+                <h3 class="font-bold text-xl md:text-[32px] text-center mt-8 md:mt-30 dark:text-gray-100">My Project</h3>
+                <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 mt-10 md:mt-20 p-4 md:p-0 ">
+                    <div class="border border-blue-900 dark:border-gray-100 p-4 md:p-5 rounded-xl md:rounded-2xl hover:scale-105 transition-all duration-300 cursor-pointer shadow-sm ">
+                        <section class="flex flex-col">
+                            <img src="../images/project-01.jpg" alt="pic-01" class="w-full h-auto">
+                            <div class="text-black">
+                                <h3 class="text-lg md:text-[28px] font-bold mt-4 md:mt-5 dark:text-gray-100">Weather app</h3>
+                                <div class="flex justify-between items-center mt-3 md:mt-4">
+                                    <ul class="flex gap-2 font-bold text-sm md:text-[16px]">
+                                        <li class="text-blue-400">HTML</li>
+                                        <li class="text-blue-700">CSS</li>
+                                        <li class="text-pink-400">JS</li>
+                                        <li class="text-green-700">APL</li>
+                                    </ul>
+                                    <div class="flex items-center border-[1px] border-amber-400 overflow-hidden w-fit rounded-[5px]">
+                                        <span class="bg-amber-400 text-white font-bold text-xs md:text-[16px] px-2 py-1 md:px-3 md:py-1">3</span>
+                                        <span class="text-amber-400 font-extrabold text-xs md:text-[16px] px-2 py-1 md:px-3 md:py-1">INTERMEDIATE</span>
+                                    </div>
+                                </div>
+                                <p class="mt-3 md:mt-4 text-sm md:text-[16px] dark:text-gray-100">Build a responsive weather app with search functionality, unit conversion, and detailed forecasts using the Open-Meteo API.</p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="border border-blue-900 dark:border-gray-100 p-4 md:p-5 rounded-xl md:rounded-2xl hover:scale-105 transition-all duration-300 cursor-pointer shadow-sm">
+                        <section class="flex flex-col">
+                            <img src="../images/project-03.jpg" alt="pic-01" class="w-full h-auto">
+                            <div class="text-black">
+                                <h3 class="text-lg md:text-[28px] font-bold mt-4 md:mt-5 dark:text-gray-100">New homepage</h3>
+                                <div class="flex justify-between items-center mt-3 md:mt-4">
+                                    <ul class="flex gap-2 font-bold text-sm md:text-[16px]">
+                                        <li class="text-blue-400">HTML</li>
+                                        <li class="text-blue-700">CSS</li>
+                                        <li class="text-pink-400">JS</li>
+                                    </ul>
+                                    <div class="flex items-center border-[1px] border-green-600 overflow-hidden w-fit rounded-[5px]">
+                                        <span class="bg-green-600 text-white font-bold text-xs md:text-[16px] px-2 py-1 md:px-3 md:py-1">2</span>
+                                        <span class="text-green-600 font-extrabold text-xs md:text-[16px] px-2 py-1 md:px-3 md:py-1">JUNIOR</span>
+                                    </div>
+                                </div>
+                                <p class="mt-3 md:mt-4 text-sm md:text-[16px] dark:text-gray-100">This news homepage will be an excellent opportunity to practice your CSS Grid skills. There will be lots of tricky decisions to make and plenty of learning opportunities!</p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="border border-blue-900 dark:border-gray-100 p-4 md:p-5 rounded-xl md:rounded-2xl hover:scale-105 transition-all duration-300 cursor-pointer shadow-sm">
+                        <section class="flex flex-col">
+                            <img src="../images/project-04.jpg" alt="pic-01" class="w-full h-auto">
+                            <div class="text-black">
+                                <h3 class="text-lg md:text-[28px] font-bold mt-4 md:mt-5 dark:text-gray-100">Tip calculator app</h3>
+                                <div class="flex justify-between items-center mt-3 md:mt-4">
+                                    <ul class="flex gap-2 font-bold text-sm md:text-[16px]">
+                                        <li class="text-blue-400">HTML</li>
+                                        <li class="text-blue-700">CSS</li>
+                                        <li class="text-pink-400">JS</li>
+                                        <li class="text-green-700">APL</li>
+                                    </ul>
+                                    <div class="flex items-center border-[1px] border-green-600 overflow-hidden w-fit rounded-[5px]">
+                                        <span class="bg-green-600 text-white font-bold text-xs md:text-[16px] px-2 py-1 md:px-3 md:py-1">2</span>
+                                        <span class="text-green-600 font-extrabold text-xs md:text-[16px] px-2 py-1 md:px-3 md:py-1">JUNIOR</span>
+                                    </div>
+                                </div>
+                                <p class="mt-3 md:mt-4 text-sm md:text-[16px] dark:text-gray-100">This small app is perfect for anyone starting to get to grips with JavaScript. The calculator functionality will be a nice test!</p>
+                            </div>
+                        </section> 
+                    </div>
+                    <div class="border border-blue-900 dark:border-gray-100 p-4 md:p-5 rounded-xl md:rounded-2xl hover:scale-105 transition-all duration-300 cursor-pointer shadow-sm">
+                        <section class="flex flex-col">
+                            <img src="../images/project-05.jpg" alt="pic-01" class="w-full h-auto">
+                            <div class="text-black">
+                                <h3 class="text-lg md:text-[28px] font-bold mt-4 md:mt-5 dark:text-gray-100">Intro section with dropdown navigation</h3>
+                                <div class="flex justify-between items-center mt-3 md:mt-4">
+                                    <ul class="flex gap-2 font-bold text-sm md:text-[16px]">
+                                        <li class="text-blue-400">HTML</li>
+                                        <li class="text-blue-700">CSS</li>
+                                        <li class="text-pink-400">JS</li>
+                                    </ul>
+                                    <div class="flex items-center border-[1px] border-green-600 overflow-hidden w-fit rounded-[5px]">
+                                        <span class="bg-green-600 text-white font-bold text-xs md:text-[12px] px-2 py-1 md:px-3 md:py-1">2</span>
+                                        <span class="text-green-600 font-extrabold text-xs md:text-[12px] px-2 py-1 md:px-3 md:py-1">JUNIOR</span>
+                                    </div>
+                                </div>
+                                <p class="mt-3 md:mt-4 text-sm md:text-[16px] dark:text-gray-100">This challenge will test your ability to create dropdown navigation menus, a common pattern on larger sites. It will also provide some nice basic layout challenges.</p>
+                            </div>
+                        </section> 
+                    </div>
+                    <div class="border border-blue-900 dark:border-gray-100 p-4 md:p-5 rounded-xl md:rounded-2xl hover:scale-105 transition-all duration-300 cursor-pointer shadow-sm">
+                        <section class="flex flex-col">
+                            <img src="../images/project-06.jpg" alt="pic-01" class="w-full h-auto">
+                            <div class="text-black">
+                                <h3 class="text-lg md:text-[28px] font-bold mt-4 md:mt-5 dark:text-gray-100">QR code component</h3>
+                                <div class="flex justify-between items-center mt-3 md:mt-4">
+                                    <ul class="flex gap-2 font-bold text-sm md:text-[16px]">
+                                        <li class="text-blue-400">HTML</li>
+                                        <li class="text-blue-700">CSS</li>
+                                    </ul>
+                                    <div class="flex items-center border-[1px] border-blue-600 overflow-hidden w-fit rounded-[5px]">
+                                        <span class="bg-blue-600 text-white font-bold text-xs md:text-[16px] px-2 py-1 md:px-3 md:py-1">1</span>
+                                        <span class="text-blue-600 font-extrabold text-xs md:text-[16px] px-2 py-1 md:px-3 md:py-1">NEWBIE</span>
+                                    </div>
+                                </div>
+                                <p class="mt-3 md:mt-4 text-sm md:text-[16px] dark:text-gray-100">This small app is perfect for anyone starting to get to grips with JavaScript. The calculator functionality will be a nice test!</p>
+                            </div>
+                        </section> 
+                    </div>
+                    <div class="border border-blue-900 dark:border-gray-100 p-4 md:p-5 rounded-xl md:rounded-2xl hover:scale-105 transition-all duration-300 cursor-pointer shadow-sm">
+                        <section class="flex flex-col">
+                            <img src="../images/project-07.jpg" alt="pic-01" class="w-full h-auto">
+                            <div class="text-black">
+                                <h3 class="text-lg md:text-[28px] font-bold mt-4 md:mt-5 dark:text-gray-100">Space tourism multi-page website</h3>
+                                <div class="flex justify-between items-center mt-3 md:mt-4">
+                                    <ul class="flex gap-2 font-bold text-sm md:text-[16px]">
+                                        <li class="text-blue-400">HTML</li>
+                                        <li class="text-blue-700">CSS</li>
+                                        <li class="text-pink-400">JS</li>
+                                    </ul>
+                                    <div class="flex items-center border-[1px] border-amber-400 overflow-hidden w-fit rounded-[5px]">
+                                        <span class="bg-amber-400 text-white font-bold text-xs md:text-[16px] px-2 py-1 md:px-3 md:py-1">3</span>
+                                        <span class="text-amber-400 font-extrabold text-xs md:text-[16px] px-2 py-1 md:px-3 md:py-1">INTERMEDIATE</span>
+                                    </div>
+                                </div>
+                                <p class="mt-3 md:mt-4 text-sm md:text-[16px] dark:text-gray-100">This project is a fun collaboration with Scrimba and Kevin Powell! If you like, you can follow along and watch Kevin complete the project on Scrimba. Lots to learn!</p>
+                            </div>
+                        </section> 
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- contact page -->
+        <section id="contact" class="min-h-screen bg-[url(../images/connect_16850790.jpg)] bg-center bg-no-repeat bg-cover flex justify-center items-center py-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <section class="bg-gray-600 flex flex-col lg:flex-row justify-center rounded-lg overflow-hidden">
+                    <div class="p-4 md:p-6 overflow-hidden w-full lg:w-1/2">
+                        <form class="space-y-4 rounded-lg">
+                            <h2 class="text-xl md:text-[32px] font-bold text-center text-white">Contact Us</h2>
+                            <p class="text-gray-300 text-center mb-4 md:mb-6">We'd love to hear from you</p>
+                            <div>
+                                <label for="name" class="text-white">Full name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-400 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="Enter your name" required>
+                            </div>
+                            <div>
+                                <label for="email" class="text-white">Email address</label>
+                                <input type="email" id="email" placeholder="Enter your email" class="w-full px-4 py-2 border border-gray-400 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" required>
+                            </div>
+                            <div>
+                                <label for="message" class="text-white">Message</label>
+                                <textarea id="message" placeholder="Enter your message" rows="4" class="w-full rounded-lg px-4 py-2 border border-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-lg flex items-center justify-center cursor-pointer text-white"><i class="fas fa-paper-plane mr-2"></i>Send message</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3052.6890293939573!2d104.87299280349308!3d11.576503078126377!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDM0JzM5LjAiTiAxMDTCsDUyJzE2LjMiRQ!5e0!3m2!1sen!2skh!4v1761216961772!5m2!1sen!2skh" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    
+    <!-- footer contain -->
+    <footer class="bg-gray-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 py-8 md:py-10">
+                <section class="text-center md:text-left">
+                    <h2 class="text-xl md:text-[28px] font-bold mb-2.5 text-white">LOGO</h2>
+                    <p class="text-sm md:text-[16px] text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eligendi exercitationem ad, ex beatae commodi! Exercitationem sapiente.</p>
+                </section>
+                <section class="text-center md:text-left">
+                    <h2 class="text-xl md:text-[28px] font-bold text-white">Contact</h2>
+                    <ul class="text-sm md:text-[16px] text-gray-300 mt-2">
+                        <li class="mt-2 flex items-center justify-center md:justify-start"><i class="fa-solid fa-location-dot fa-flip mr-2"></i>HHHHHHHHH</li>
+                        <li class="mt-2 flex items-center justify-center md:justify-start"><i class="fa-solid fa-phone-volume fa-shake mr-2"></i>Phone: (+885) 123 456 72</li>
+                        <li class="mt-2 flex items-center justify-center md:justify-start"><i class="fa-solid fa-envelope fa-shake mr-2"></i>Email: lencyou3@gmail.com</li>
+                    </ul>
+                </section>
+                <section class="text-center md:text-left">
+                    <h2 class="text-xl md:text-[28px] font-bold text-white">Links</h2>
+                    <ul class="text-sm md:text-[16px] text-gray-300">
+                        <li class="mt-2"><a href="#home" class="hover:text-blue-400 transition-colors">Home</a></li>
+                        <li class="mt-2"><a href="#about" class="hover:text-blue-400 transition-colors">About</a></li>
+                        <li class="mt-2"><a href="#skill" class="hover:text-blue-400 transition-colors">Skill</a></li>
+                        <li class="mt-2"><a href="#project" class="hover:text-blue-400 transition-colors">Project</a></li>
+                        <li class="mt-2"><a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a></li>
+                    </ul>
+                </section>
+                <section class="text-center md:text-left">
+                    <h2 class="text-xl md:text-[28px] font-bold text-white">Social media links</h2>
+                    <ul class="flex gap-3 justify-center md:justify-start mt-2">
+                        <li><a href=""><i class="fa-brands fa-facebook fa-shake text-2xl md:text-[32px] text-white hover:text-blue-400"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram fa-shake text-2xl md:text-[32px] text-white hover:text-pink-400"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-tiktok fa-shake text-2xl md:text-[32px] text-white hover:text-black"></i></a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
