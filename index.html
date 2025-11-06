@@ -1,8 +1,8 @@
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio Personal</title>
     <!-- CDN link -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- link font style -->
@@ -13,6 +13,68 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- style animation -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- style custom -->
+    <style type="text/tailwindcss">
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-primary: "JetBrains Mono", monospace;
+    --color-primary: #F9FAFB;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+        
+.particle {
+    position: absolute;
+    bottom: 0;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(59, 130, 246, 0.7);
+    border-radius: 50%;
+    animation: rise 15s linear infinite;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.8);
+}
+        
+        /* Custom gradient background */
+.gradient-bg {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e1f5fe 50%, #b3e5fc 100%);
+}
+        
+        /* Floating animation for profile image */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+        /* Custom particle animation */
+        
+        /* Custom responsive adjustments */
+@media (max-width: 768px) {
+    .ml-65, .ml-67, .ml-50, .ml-48, .ml-64, .ml-60, .ml-58, .ml-62 {
+        margin-left: auto;
+    }
+}
+    </style>
 </head>
 <body class="font-primary dark:bg-gray-500 ">
     <!-- header contain -->
@@ -539,6 +601,8 @@
         </div>
     </footer>
     
-    
+    <!-- Javascript -->
+    <script src="./Javascript/script.js"></script>
+    <script src="./Javascript/spaghetti.js"></script>
 </body>
 </html>
